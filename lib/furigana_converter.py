@@ -2,7 +2,7 @@ import MeCab
 
 class FuriganaConverter():
     def __init__(self):
-        self.mecab = MeCab.Tagger("-Ochasen")
+        self.mecab = MeCab.Tagger("-Ochasen -d /usr/local/mecab/lib/mecab/dic/mecab-ipadic-neologd")
         
     def get_furigana(self, text):
         analyzed = self.morphological_analysis(text)
